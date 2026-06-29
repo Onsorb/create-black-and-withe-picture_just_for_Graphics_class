@@ -1,18 +1,15 @@
 import cv2
 import os
 
-# مسیر دقیق فایل (بر اساس خروجی dir که نشان می‌دهد فایل وجود دارد)
 image_path = "C:/Users/AsaGity/Downloads/pythonphoto.jpg"
 
 print(f"is loading: {image_path}")
 
-# بررسی وجود فایل با os.path
 if not os.path.exists(image_path):
     print(f" Error ")
     print("File located is analized :", image_path)
     exit()
 
-# بارگذاری تصویر
 img = cv2.imread(image_path)
 
 if img is None:
@@ -55,7 +52,7 @@ while True:
         else:
             print(" First press the [g] key to turn the image gray!")
     
-    elif key == 27 or key == ord('q'):  # ESC=27
+    elif key == 27 or key == ord('q'):  
         print("|| Exit ||")
         break
 
