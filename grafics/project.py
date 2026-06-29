@@ -1,4 +1,4 @@
-import cv2
+import cv2 #Open Source Computer Vision Library
 import os
 
 image_path = "C:/Users/AsaGity/Downloads/pythonphoto.jpg"
@@ -10,7 +10,7 @@ if not os.path.exists(image_path):
     print("File located is analized :", image_path)
     exit()
 
-img = cv2.imread(image_path)
+img = cv2.imread(image_path)#Image Read 
 
 if img is None:
     print(" Unreadable!")
@@ -23,7 +23,7 @@ print(f"Dimensions: {img.shape[1]} x {img.shape[0]} ")
 gray_image = None
 is_gray = False
 
-cv2.imshow("Image processing - look at the console for commands", img)
+cv2.imshow("Image processing - look at the console for commands", img)#image show
 
 print("\n" + "="*50)
 print("Commands (activate the image in the window and press the keys):")
@@ -37,7 +37,7 @@ while True:
     
     if key == ord('g'):
         if not is_gray:
-            gray_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+            gray_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)#Convert Color
             cv2.imshow("Image path - look at the console for commands", gray_image)
             is_gray = True
             print(" The image has been converted to Grayscale! Now press [s] to save.")
