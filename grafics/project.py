@@ -52,7 +52,7 @@ while True:
         else:
             print(" First press the [g] key to turn the image gray!")
     
-    elif key == 27 or key == ord('q'):  
+    elif key == 27 or key == ord('q'):  #ESC27
         print("|| Exit ||")
         break
 
